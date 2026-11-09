@@ -1,0 +1,96 @@
+{
+ "greetings": [
+  "greet_1",
+  "greet_2",
+  "greet_3"
+ ],
+ "mcs": [
+  "mc_big_poopy_pants",
+  "mc_lil_nervous",
+  "mc_mc_static",
+  "mc_loose_cannon",
+  "mc_kid_venom",
+  "mc_the_champ",
+  "mc_any"
+ ],
+ "challengers": [
+  "ch_1",
+  "ch_2",
+  "ch_3"
+ ],
+ "unnamed": [
+  "anon_1",
+  "anon_2"
+ ],
+ "begins": [
+  "go_1",
+  "go_2",
+  "go_3"
+ ],
+ "count": [
+  "count_4",
+  "count_3",
+  "count_2",
+  "count_1"
+ ],
+ "win_leads": [
+  "win_lead_1",
+  "win_lead_2",
+  "win_lead_3"
+ ],
+ "mc_wins": [
+  "win_mc_big_poopy_pants",
+  "win_mc_lil_nervous",
+  "win_mc_mc_static",
+  "win_mc_loose_cannon",
+  "win_mc_kid_venom",
+  "win_mc_the_champ",
+  "win_mc_any"
+ ],
+ "challenger_wins": [
+  "win_you_1",
+  "win_you_2"
+ ],
+ "draws": [
+  "draw_1",
+  "draw_2"
+ ],
+ "text": {
+  "greet_1": "What's good, everybody! Welcome to battle night! It's DJ Crossfade on the decks, and you already know how we do it in here!",
+  "greet_2": "Make some noise! It's battle night, and tonight somebody's going home humbled!",
+  "greet_3": "Yo, yo, yo! Can I get some energy in here? Welcome out to battle night!",
+  "mc_big_poopy_pants": "Uh... somebody wandered in from the birthday party next door. Give it up for... Poop McPants!",
+  "mc_lil_nervous": "In this corner: first battle ever, so be nice... or don't! Lil Nervous!",
+  "mc_mc_static": "In this corner: five years running the Thursday cypher, a legend in their own mind... MC Static!",
+  "mc_loose_cannon": "Security, stay close. Banned from two leagues and back for more... Loose Cannon!",
+  "mc_kid_venom": "In this corner: undefeated this season, and the homework's already done on you... Kid Venom!",
+  "mc_the_champ": "Everybody on your feet. Twelve-time champion, battle rap royalty... The Champ!",
+  "mc_any": "In this corner: tonight's house MC! Give it up!",
+  "ch_1": "And their challenger tonight, put your hands together for...",
+  "ch_2": "And stepping up to the mic, the challenger! Make some noise for...",
+  "ch_3": "And in the other corner, straight out of the dressing room, it's...",
+  "anon_1": "And in the other corner, a brand new face! Show the challenger some love!",
+  "anon_2": "And their challenger, stepping up for the very first time! Make some noise!",
+  "go_1": "Alright, alright! Let's get it on!",
+  "go_2": "Let's begin! Run that beat!",
+  "go_3": "Okay! Here we go!",
+  "count_4": "Four!",
+  "count_3": "Three!",
+  "count_2": "Two!",
+  "count_1": "One!",
+  "win_lead_1": "Alright, alright, settle down! The crowd has spoken... and your winner is...",
+  "win_lead_2": "Okay, okay! What a battle! Your winner tonight...",
+  "win_lead_3": "Make some noise one more time! And the winner is...",
+  "win_mc_big_poopy_pants": "Poop McPants?! Somebody call the birthday party!",
+  "win_mc_lil_nervous": "Lil Nervous! First battle ever, and the nerves held up!",
+  "win_mc_mc_static": "MC Static! The Thursday cypher legend lives on!",
+  "win_mc_loose_cannon": "Loose Cannon! Somebody check on the challenger!",
+  "win_mc_kid_venom": "Kid Venom! Still undefeated!",
+  "win_mc_the_champ": "Still the champ... The Champ!",
+  "win_mc_any": "The house MC! Holding it down!",
+  "win_you_1": "The challenger! What an upset!",
+  "win_you_2": "The new face! Straight out of the dressing room and straight to the top!",
+  "draw_1": "Hold up... it's a tie! Too close to call! Give it up for both of them!",
+  "draw_2": "I can't split them! It's a draw! Make some noise for both of these MCs!"
+ }
+}

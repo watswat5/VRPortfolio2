@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "freestyle",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["-c", "source .venv/bin/activate && cd backend && exec uvicorn freestyle.server:app --host 127.0.0.1 --port 8000"],
+      "port": 8000
+    },
+    {
+      "name": "freestyle-offline",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["-c", "source .venv/bin/activate && cd backend && TRANSCRIBER=scripted SCRIPTED_TRANSCRIPT=out/tight.words.json RATER=heuristic OPPONENT=template VOICE=none FREESTYLE_PASSWORD= exec uvicorn freestyle.server:app --host 127.0.0.1 --port 8771"],
+      "port": 8771
+    }
+  ]
+}

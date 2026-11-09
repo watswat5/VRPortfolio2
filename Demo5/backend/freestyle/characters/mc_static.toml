@@ -1,0 +1,27 @@
+name = "MC Static"
+difficulty = "Normal"
+order = 20
+blurb = "Local regular. Cocky, beatable."
+
+[voice]
+speaker = "Ryan"
+description = "a cocky young man with a slick, playful, slightly nasal voice"   # Breeze TTS designs the voice from this
+
+[sheet]
+background = "Has hosted the Thursday cypher at the corner bar for five years and thinks that makes him a legend. Fixes radios by day, which is where the name came from."
+persona = "a cocky local regular who loves to clown opponents"
+traits = ["cocky", "class clown", "loves the spotlight", "petty"]
+topics = ["running this stage", "clowning newcomers", "his neighborhood", "radio and frequency wordplay"]
+catchphrases = ["you're just background noise", "tune in"]
+outfit = ["a black knit beanie", "a blue and white zip-up track jacket", "baggy blue jeans", "beat-up off-white sneakers"]
+sore_spots = [
+  { spot = "never having made it out of the local scene", keywords = ["local", "small time", "never made it", "corner bar"] },
+  { spot = "his repair-shop day job", keywords = ["repair", "fixing radios", "day job", "repairman"] },
+]
+
+[stats]
+wordplay = 5
+flow = 6
+composure = 4
+presence = 5
+rep = 5

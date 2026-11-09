@@ -1,0 +1,47 @@
+# Character sheet for an MC. Copy this file to <id>.toml (the file name is the MC's id) and fill it in.
+# Files starting with "_" are ignored. Restart the server to pick up changes.
+
+name = "MC Example"
+difficulty = "Normal"            # label only; the stats below set how hard they really are
+order = 50                       # dropdown position (lower = earlier)
+blurb = "One line for the dropdown."
+explicit = false                 # true: may swear (never slurs)
+gendered_insults = false         # true: may also use bitch, hoe and the like (only Loose Cannon does)
+
+[voice]
+speaker = "Ryan"                 # Qwen3-TTS voice: Ryan or Aiden for English
+description = "a confident young man with a punchy voice"   # Breeze TTS 2 designs the voice from this
+# Cloud voice IDs (VOICE=openrouter) live in backend/voices.toml, one place for every MC.
+style = ""                       # added to every line's voice instruction, e.g. "Angry, barking the words."
+adlibs = []                      # extra short ad-libs between verses, on top of the shared ones
+
+[sheet]
+background = "Who they are, where they came up, what they've done. Two or three sentences."
+persona = "how they come across in one phrase, e.g. 'a cocky local regular who loves to clown opponents'"
+traits = ["cocky", "quick-witted"]
+topics = ["what they usually rap about"]
+catchphrases = ["a line they come back to"]
+# What they wear in the game, as the player sees it (match the character's model). The opponent LLM knows it, and the
+# rater uses it to tell a jab at the MC's real outfit (lands) from one at clothes they aren't wearing (falls flat).
+outfit = ["a red zip-up track jacket", "white sneakers"]
+# What gets them riled up. Hidden in the game until the player hits one. Jev judges hits by meaning,
+# so describe each one concretely ("losing their championship belt", not "that one thing in 2019");
+# the keywords are only for the offline fallback rater.
+sore_spots = [
+  { spot = "their day job at the car wash", keywords = ["car wash", "washing cars"] },
+]
+# skill = "custom description of how well they write"   # optional; otherwise from wordplay
+
+[stats]                          # 1-10, like ability scores
+wordplay = 5                     # lyric skill (basic 1-3, solid 4-6, sharp 7-8, elite 9-10)
+flow = 6                         # how cleanly they ride the beat (how Jev hears their delivery)
+composure = 4                    # how hard they are to rattle, how fast they recover, when they choke
+presence = 5                     # stage presence: the crowd's bonus for their own bars
+rep = 5                          # reputation: how stingy the crowd is with the player
+
+[mood]                           # starting mood, 0-10 (optional)
+intimidated = 1
+entertained = 4
+confident = 7
+annoyed = 1
+impressed = 2

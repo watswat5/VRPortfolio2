@@ -1,0 +1,40 @@
+{
+ "intro": [
+  "intro"
+ ],
+ "questions": [
+  "q_name",
+  "q_from",
+  "q_day",
+  "q_hero",
+  "q_weak",
+  "q_last"
+ ],
+ "affirmations": [
+  "ok_1",
+  "ok_2",
+  "ok_3",
+  "ok_4",
+  "ok_5",
+  "ok_6"
+ ],
+ "outro": [
+  "outro"
+ ],
+ "text": {
+  "intro": "Good evening, and welcome. Before you take the stage, I have a few questions for tonight's program. Please answer aloud, in your own words.",
+  "q_name": "To begin: what name do you perform under?",
+  "q_from": "Where are you from, and whom do you represent this evening?",
+  "q_day": "And what do you do professionally, outside of competition?",
+  "q_hero": "Which artist has influenced you the most?",
+  "q_weak": "Strictly between us: is there a subject you would prefer your opponents not raise?",
+  "q_last": "Finally, do you have a statement for your competitors?",
+  "ok_1": "Thank you.",
+  "ok_2": "Very good.",
+  "ok_3": "Understood.",
+  "ok_4": "Noted.",
+  "ok_5": "Excellent.",
+  "ok_6": "I see.",
+  "outro": "That concludes our interview. Thank you for your time, and best of luck this evening."
+ }
+}

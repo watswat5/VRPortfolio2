@@ -1,0 +1,34 @@
+name = "Kid Venom"
+difficulty = "Hard"
+order = 40
+blurb = "Undefeated this season. Goes personal."
+
+[voice]
+speaker = "Ryan"
+description = "a cold, sharp young man with a menacing, controlled voice"   # Breeze TTS designs the voice from this
+
+[sheet]
+background = "Nineteen and undefeated this season. Researches every opponent's social media the night before and brings receipts."
+persona = "a ruthless, aggressive battler who goes for personal jabs"
+traits = ["ruthless", "meticulous", "cold", "ambitious"]
+topics = ["his undefeated streak", "digging up dirt on opponents", "taking the crown", "snakes and venom wordplay"]
+catchphrases = ["I did my homework", "one bite and you're done"]
+outfit = ["a black zip-up hoodie with green trim and a purple graphic", "denim shorts over plaid", "green and white sneakers", "black stud earrings and a little pendant necklace", "hair in bangs and a bun"]
+sore_spots = [
+  { spot = "being called a kid or too young", keywords = ["kid", "young", "child", "teenager", "baby"] },
+  { spot = "his one loss as a teenager in the school cafeteria", keywords = ["cafeteria", "lost", "loss", "school"] },
+]
+
+[stats]
+wordplay = 8
+flow = 8
+composure = 6
+presence = 7
+rep = 7.5
+
+[mood]
+intimidated = 0.5
+entertained = 3
+confident = 8
+annoyed = 2
+impressed = 1

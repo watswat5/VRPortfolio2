@@ -1,0 +1,71 @@
+{
+ "size": [
+  2048,
+  192
+ ],
+ "tileable": "horizontally",
+ "slot_px": 32,
+ "rows": [
+  {
+   "baseline_y": 128,
+   "figure_px": 70,
+   "x_offset": 16.0
+  },
+  {
+   "baseline_y": 184,
+   "figure_px": 84,
+   "x_offset": 0
+  }
+ ],
+ "sets": {
+  "calm": {
+   "moods": [
+    0,
+    1,
+    1,
+    2,
+    3,
+    3,
+    4,
+    5
+   ],
+   "frames": [
+    "strip_calm_A.png",
+    "strip_calm_B.png"
+   ]
+  },
+  "into_it": {
+   "moods": [
+    4,
+    5,
+    5,
+    6,
+    6,
+    7,
+    7,
+    8
+   ],
+   "frames": [
+    "strip_into_it_A.png",
+    "strip_into_it_B.png"
+   ]
+  },
+  "wild": {
+   "moods": [
+    7,
+    8,
+    8,
+    9,
+    9,
+    10,
+    11,
+    11
+   ],
+   "frames": [
+    "strip_wild_A.png",
+    "strip_wild_B.png"
+   ]
+  }
+ },
+ "shader": "Tile along the stands. Pick the set from the crowd level (calm 0-3, into_it 4-7, wild 8-11) and swap A/B on the beat. Bounce: slot = floor(uv.x * size.x / slot_px); phase = hash(slot + section_id); offset_y = amplitude(crowd level) * max(0, sin(beat_phase * 2pi + phase * 2pi)). Phone lights and waves can be layered in the same shader."
+}

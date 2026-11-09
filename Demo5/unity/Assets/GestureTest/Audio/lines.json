@@ -1,0 +1,47 @@
+[
+ {
+  "file": "line_01_laughs",
+  "for": "laughs",
+  "text": "Ha! That's the best you got? I've heard harder bars at a bus stop."
+ },
+ {
+  "file": "line_02_shrugs",
+  "for": "shrugs",
+  "text": "Whatever, man. I don't even know why you showed up tonight."
+ },
+ {
+  "file": "line_03_nods",
+  "for": "nods",
+  "text": "Okay, okay. I see you. That one was clean, I'll give you that."
+ },
+ {
+  "file": "line_04_winces",
+  "for": "winces",
+  "text": "Oof. Alright. That one stung a little, not gonna lie."
+ },
+ {
+  "file": "line_05_glares",
+  "for": "glares",
+  "text": "Say that again. Go on. Say it to my face."
+ },
+ {
+  "file": "line_06_steps_back",
+  "for": "steps_back",
+  "text": "Whoa, whoa, back up. Where'd that even come from?"
+ },
+ {
+  "file": "line_07_rapping",
+  "for": "rapping",
+  "text": "Check the mic, one two, I'm the king of this stage, you're a page I'ma tear, then I'm turning the page."
+ },
+ {
+  "file": "line_08_rapping",
+  "for": "rapping",
+  "text": "Step in my lane and you're stuck in reverse, I'm a curse on your name and I'm saving the worst."
+ },
+ {
+  "file": "line_09_hype",
+  "for": "hype",
+  "text": "Yeah! Let's go! Make some noise for your champion!"
+ }
+]

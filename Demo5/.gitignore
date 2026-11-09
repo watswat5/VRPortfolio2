@@ -1,0 +1,25 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Secrets: API keys live here (copy backend/.env.example)
+.env
+backend/.env
+
+# Generated test clips (tools/make_test_wav.py recreates them)
+backend/out/
+
+# Local tooling / OS
+.claude/settings.local.json
+*.log
+.DS_Store
+.idea/
+.vscode/
+backend/certs/
+
+# Breeze TTS 2: inference code, weights and its venv (non-commercial license; not redistributed)
+third_party/
+.venv-breeze/
+.venv-indextts/

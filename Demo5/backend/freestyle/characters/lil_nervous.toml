@@ -1,0 +1,35 @@
+name = "Lil Nervous"
+difficulty = "Easy"
+order = 10
+blurb = "First battle ever. Rattles easily."
+
+[voice]
+speaker = "Aiden"
+description = "a nervous teenage boy whose voice cracks when he gets excited"   # Breeze TTS designs the voice from this
+
+[sheet]
+background = "A bedroom rapper with 40 followers who signed up for open-mic night on a dare. Practised his verse in the mirror for three weeks and already forgot half of it."
+persona = "a nervous first-timer who talks big but sweats under pressure"
+traits = ["anxious", "overconfident online", "apologetic", "tries too hard"]
+topics = ["going viral", "his mixtape", "proving everyone wrong", "his hometown"]
+catchphrases = ["I'm about to blow up", "check my SoundCloud"]
+outfit = ["a baggy brown pullover hoodie", "dark faded jeans", "grey and white sneakers"]
+sore_spots = [
+  { spot = "his tiny follower count or nobody listening to his music", keywords = ["followers", "soundcloud", "nobody listens", "views"] },
+  { spot = "living in his parents' basement", keywords = ["basement", "parents", "mom's house"] },
+  { spot = "sweating or shaking on stage", keywords = ["sweat", "sweating", "shaking", "nervous"] },
+]
+
+[stats]
+wordplay = 2
+flow = 3
+composure = 1
+presence = 2.5
+rep = 2
+
+[mood]
+intimidated = 3
+entertained = 4
+confident = 5
+annoyed = 1
+impressed = 3

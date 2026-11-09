@@ -1,0 +1,650 @@
+{
+ "agerabeatz-spray-171167.mp3": {
+  "beats_per_bar": 4,
+  "bpm": 71.508,
+  "breaks": [
+   [
+    3.2802,
+    9.9927
+   ]
+  ],
+  "downbeat_margin": 0.17,
+  "drop_bar": 0,
+  "drop_s": 3.2802,
+  "duration_s": 217.47,
+  "first_downbeat_s": 3.2802,
+  "grid_score": 2.23,
+  "key": {
+   "mtime": 1792469828,
+   "size": 6959020,
+   "version": 11
+  },
+  "loop_bars": 61,
+  "loop_end_s": 208.0125,
+  "loop_start_s": 3.2802,
+  "phrases": [
+   {
+    "end": 36.8428,
+    "section": 0,
+    "start": 9.9927
+   },
+   {
+    "end": 63.693,
+    "section": 0,
+    "start": 36.8428
+   },
+   {
+    "end": 90.5431,
+    "section": 0,
+    "start": 63.693
+   },
+   {
+    "end": 117.3933,
+    "section": 0,
+    "start": 90.5431
+   },
+   {
+    "end": 144.2434,
+    "section": 0,
+    "start": 117.3933
+   },
+   {
+    "end": 171.0935,
+    "section": 0,
+    "start": 144.2434
+   },
+   {
+    "end": 208.0125,
+    "section": 0,
+    "start": 171.0935
+   }
+  ]
+ },
+ "flakitogilbeatz-beat-de-boom-bap-callejero-544380.mp3": {
+  "beats_per_bar": 4,
+  "bpm": 96.496,
+  "breaks": [
+   [
+    211.5034,
+    223.9391
+   ]
+  ],
+  "downbeat_margin": 0.14,
+  "drop_bar": 1,
+  "drop_s": 2.5828,
+  "duration_s": 226.85,
+  "first_downbeat_s": 0.0957,
+  "grid_score": 9.81,
+  "key": {
+   "mtime": 1792469828,
+   "size": 7259115,
+   "version": 11
+  },
+  "loop_bars": 89,
+  "loop_end_s": 223.9391,
+  "loop_start_s": 2.5828,
+  "phrases": [
+   {
+    "end": 22.48,
+    "section": 0,
+    "start": 2.5828
+   },
+   {
+    "end": 42.3772,
+    "section": 0,
+    "start": 22.48
+   },
+   {
+    "end": 62.2744,
+    "section": 0,
+    "start": 42.3772
+   },
+   {
+    "end": 82.1716,
+    "section": 0,
+    "start": 62.2744
+   },
+   {
+    "end": 102.0688,
+    "section": 0,
+    "start": 82.1716
+   },
+   {
+    "end": 121.966,
+    "section": 0,
+    "start": 102.0688
+   },
+   {
+    "end": 141.8632,
+    "section": 0,
+    "start": 121.966
+   },
+   {
+    "end": 161.7604,
+    "section": 0,
+    "start": 141.8632
+   },
+   {
+    "end": 181.6576,
+    "section": 0,
+    "start": 161.7604
+   },
+   {
+    "end": 201.5548,
+    "section": 0,
+    "start": 181.6576
+   },
+   {
+    "end": 211.5034,
+    "section": 0,
+    "start": 201.5548
+   }
+  ]
+ },
+ "jake_plah-freestyle-rap-beat-435112.mp3": {
+  "beats_per_bar": 4,
+  "bpm": 69.998,
+  "breaks": [
+   [
+    82.321,
+    109.7504
+   ],
+   [
+    205.7531,
+    219.4678
+   ]
+  ],
+  "downbeat_margin": 0.81,
+  "drop_bar": 4,
+  "drop_s": 13.7477,
+  "duration_s": 222.79,
+  "first_downbeat_s": 0.033,
+  "grid_score": 12.49,
+  "key": {
+   "mtime": 1792469828,
+   "size": 7129344,
+   "version": 11
+  },
+  "loop_bars": 60,
+  "loop_end_s": 219.4678,
+  "loop_start_s": 13.7477,
+  "phrases": [
+   {
+    "end": 41.177,
+    "section": 0,
+    "start": 13.7477
+   },
+   {
+    "end": 68.6064,
+    "section": 0,
+    "start": 41.177
+   },
+   {
+    "end": 82.321,
+    "section": 0,
+    "start": 68.6064
+   },
+   {
+    "end": 137.1798,
+    "section": 1,
+    "start": 109.7504
+   },
+   {
+    "end": 164.6091,
+    "section": 1,
+    "start": 137.1798
+   },
+   {
+    "end": 192.0385,
+    "section": 1,
+    "start": 164.6091
+   },
+   {
+    "end": 205.7531,
+    "section": 1,
+    "start": 192.0385
+   }
+  ]
+ },
+ "jake_plah-rap-freestyle-beat-435114.mp3": {
+  "beats_per_bar": 4,
+  "bpm": 74.998,
+  "breaks": [
+   [
+    38.4295,
+    64.0301
+   ],
+   [
+    89.6308,
+    102.4312
+   ],
+   [
+    128.0319,
+    147.2324
+   ]
+  ],
+  "downbeat_margin": 0.59,
+  "drop_bar": 4,
+  "drop_s": 12.8288,
+  "duration_s": 198.48,
+  "first_downbeat_s": 0.0284,
+  "grid_score": 8.1,
+  "key": {
+   "mtime": 1792121622,
+   "size": 6351360,
+   "version": 11
+  },
+  "loop_bars": 57,
+  "loop_end_s": 195.2336,
+  "loop_start_s": 12.8288,
+  "phrases": [
+   {
+    "end": 38.4295,
+    "section": 0,
+    "start": 12.8288
+   },
+   {
+    "end": 89.6308,
+    "section": 1,
+    "start": 64.0301
+   },
+   {
+    "end": 128.0319,
+    "section": 2,
+    "start": 102.4312
+   },
+   {
+    "end": 172.833,
+    "section": 3,
+    "start": 147.2324
+   },
+   {
+    "end": 195.2336,
+    "section": 3,
+    "start": 172.833
+   }
+  ]
+ },
+ "jake_plah-trap-freestyle-beat-435149.mp3": {
+  "beats_per_bar": 4,
+  "bpm": 72.0,
+  "breaks": [
+   [
+    36.6979,
+    40.0312
+   ],
+   [
+    63.3646,
+    66.6979
+   ],
+   [
+    80.0312,
+    93.3646
+   ],
+   [
+    116.6979,
+    120.0312
+   ],
+   [
+    160.0312,
+    173.3646
+   ],
+   [
+    196.6979,
+    200.0312
+   ],
+   [
+    223.3646,
+    240.0312
+   ]
+  ],
+  "downbeat_margin": 0.33,
+  "drop_bar": 4,
+  "drop_s": 13.3646,
+  "duration_s": 245.06,
+  "first_downbeat_s": 0.0312,
+  "grid_score": 10.4,
+  "key": {
+   "mtime": 1792121654,
+   "size": 7842048,
+   "version": 11
+  },
+  "loop_bars": 68,
+  "loop_end_s": 240.0312,
+  "loop_start_s": 13.3646,
+  "phrases": [
+   {
+    "end": 40.0312,
+    "section": 0,
+    "start": 13.3646
+   },
+   {
+    "end": 66.6979,
+    "section": 0,
+    "start": 40.0312
+   },
+   {
+    "end": 80.0312,
+    "section": 0,
+    "start": 66.6979
+   },
+   {
+    "end": 120.0312,
+    "section": 1,
+    "start": 93.3646
+   },
+   {
+    "end": 146.6979,
+    "section": 1,
+    "start": 120.0312
+   },
+   {
+    "end": 160.0312,
+    "section": 1,
+    "start": 146.6979
+   },
+   {
+    "end": 200.0312,
+    "section": 2,
+    "start": 173.3646
+   },
+   {
+    "end": 223.3646,
+    "section": 2,
+    "start": 200.0312
+   }
+  ]
+ },
+ "kiravale-freestyle-beats-598112.mp3": {
+  "beats_per_bar": 4,
+  "bpm": 88.49,
+  "breaks": [
+   [
+    84.1178,
+    86.8299
+   ]
+  ],
+  "downbeat_margin": 0.26,
+  "drop_bar": 0,
+  "drop_s": 0.0405,
+  "duration_s": 134.28,
+  "first_downbeat_s": 0.0405,
+  "grid_score": 9.73,
+  "key": {
+   "mtime": 1792121605,
+   "size": 4296960,
+   "version": 11
+  },
+  "loop_bars": 49,
+  "loop_end_s": 132.9368,
+  "loop_start_s": 0.0405,
+  "phrases": [
+   {
+    "end": 21.7378,
+    "section": 0,
+    "start": 0.0405
+   },
+   {
+    "end": 43.4352,
+    "section": 0,
+    "start": 21.7378
+   },
+   {
+    "end": 65.1326,
+    "section": 0,
+    "start": 43.4352
+   },
+   {
+    "end": 86.8299,
+    "section": 0,
+    "start": 65.1326
+   },
+   {
+    "end": 108.5273,
+    "section": 0,
+    "start": 86.8299
+   },
+   {
+    "end": 132.9368,
+    "section": 0,
+    "start": 108.5273
+   }
+  ]
+ },
+ "vaitsez-freestyle-freestyle-drill-beat-565501.mp3": {
+  "beats_per_bar": 4,
+  "bpm": 73.498,
+  "breaks": [
+   [
+    52.2664,
+    55.5318
+   ],
+   [
+    137.1666,
+    140.432
+   ],
+   [
+    166.5552,
+    169.8206
+   ]
+  ],
+  "downbeat_margin": 0.84,
+  "drop_bar": 0,
+  "drop_s": 0.02,
+  "duration_s": 170.5,
+  "first_downbeat_s": 0.02,
+  "grid_score": 7.29,
+  "key": {
+   "mtime": 1792121599,
+   "size": 5455872,
+   "version": 11
+  },
+  "loop_bars": 52,
+  "loop_end_s": 169.8206,
+  "loop_start_s": 0.02,
+  "phrases": [
+   {
+    "end": 26.1432,
+    "section": 0,
+    "start": 0.02
+   },
+   {
+    "end": 55.5318,
+    "section": 0,
+    "start": 26.1432
+   },
+   {
+    "end": 81.6549,
+    "section": 0,
+    "start": 55.5318
+   },
+   {
+    "end": 107.7781,
+    "section": 0,
+    "start": 81.6549
+   },
+   {
+    "end": 140.432,
+    "section": 0,
+    "start": 107.7781
+   },
+   {
+    "end": 169.8206,
+    "section": 0,
+    "start": 140.432
+   }
+  ]
+ },
+ "vaitsez-freestyle-freestyle-trap-beat-578978.mp3": {
+  "beats_per_bar": 4,
+  "bpm": 61.5,
+  "breaks": [],
+  "downbeat_margin": 0.7,
+  "drop_bar": 0,
+  "drop_s": 0.0242,
+  "duration_s": 205.97,
+  "first_downbeat_s": 0.0242,
+  "grid_score": 13.65,
+  "key": {
+   "mtime": 1792121602,
+   "size": 6590976,
+   "version": 11
+  },
+  "loop_bars": 52,
+  "loop_end_s": 202.951,
+  "loop_start_s": 0.0242,
+  "phrases": [
+   {
+    "end": 31.2437,
+    "section": 0,
+    "start": 0.0242
+   },
+   {
+    "end": 62.4632,
+    "section": 0,
+    "start": 31.2437
+   },
+   {
+    "end": 93.6827,
+    "section": 0,
+    "start": 62.4632
+   },
+   {
+    "end": 124.9022,
+    "section": 0,
+    "start": 93.6827
+   },
+   {
+    "end": 156.1218,
+    "section": 0,
+    "start": 124.9022
+   },
+   {
+    "end": 187.3413,
+    "section": 0,
+    "start": 156.1218
+   },
+   {
+    "end": 202.951,
+    "section": 0,
+    "start": 187.3413
+   }
+  ]
+ },
+ "vaitsez-rap-rap-beat-beats-music-486586.mp3": {
+  "beats_per_bar": 4,
+  "bpm": 71.998,
+  "breaks": [
+   [
+    29.19,
+    45.8572
+   ],
+   [
+    162.5271,
+    179.1942
+   ]
+  ],
+  "downbeat_margin": 0.52,
+  "drop_bar": 0,
+  "drop_s": 2.5226,
+  "duration_s": 190.08,
+  "first_downbeat_s": 2.5226,
+  "grid_score": 7.99,
+  "key": {
+   "mtime": 1792469828,
+   "size": 6082560,
+   "version": 11
+  },
+  "loop_bars": 56,
+  "loop_end_s": 189.1945,
+  "loop_start_s": 2.5226,
+  "phrases": [
+   {
+    "end": 29.19,
+    "section": 0,
+    "start": 2.5226
+   },
+   {
+    "end": 72.5246,
+    "section": 1,
+    "start": 45.8572
+   },
+   {
+    "end": 99.192,
+    "section": 1,
+    "start": 72.5246
+   },
+   {
+    "end": 125.8594,
+    "section": 1,
+    "start": 99.192
+   },
+   {
+    "end": 162.5271,
+    "section": 1,
+    "start": 125.8594
+   }
+  ]
+ },
+ "vaitsez-rap-rap-beats-beat-483319.mp3": {
+  "beats_per_bar": 4,
+  "bpm": 70.002,
+  "breaks": [],
+  "downbeat_margin": 0.71,
+  "drop_bar": 0,
+  "drop_s": 0.0257,
+  "duration_s": 209.42,
+  "first_downbeat_s": 0.0257,
+  "grid_score": 6.99,
+  "key": {
+   "mtime": 1792469828,
+   "size": 6701568,
+   "version": 11
+  },
+  "loop_bars": 61,
+  "loop_end_s": 209.1626,
+  "loop_start_s": 0.0257,
+  "phrases": [
+   {
+    "end": 27.4535,
+    "section": 0,
+    "start": 0.0257
+   },
+   {
+    "end": 54.8813,
+    "section": 0,
+    "start": 27.4535
+   },
+   {
+    "end": 82.3091,
+    "section": 0,
+    "start": 54.8813
+   },
+   {
+    "end": 109.7369,
+    "section": 0,
+    "start": 82.3091
+   },
+   {
+    "end": 137.1647,
+    "section": 0,
+    "start": 109.7369
+   },
+   {
+    "end": 164.5924,
+    "section": 0,
+    "start": 137.1647
+   },
+   {
+    "end": 192.0202,
+    "section": 0,
+    "start": 164.5924
+   },
+   {
+    "end": 209.1626,
+    "section": 0,
+    "start": 192.0202
+   }
+  ]
+ }
+}

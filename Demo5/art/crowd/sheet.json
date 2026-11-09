@@ -1,0 +1,49 @@
+{
+ "cell": [
+  256,
+  384
+ ],
+ "columns": 12,
+ "rows": 2,
+ "moods": [
+  "dead",
+  "silent",
+  "restless",
+  "polite",
+  "warming up",
+  "nodding",
+  "into it",
+  "cheering",
+  "hyped",
+  "going wild",
+  "losing it",
+  "raise the roof"
+ ],
+ "layout": "column = crowd mood 0..11 (round(level)), row = frame A/B (flip on the beat)",
+ "pivot": [
+  128.0,
+  336
+ ],
+ "characters": [
+  {
+   "name": "beanie",
+   "sheet": "crowd_beanie.png",
+   "source": "crowd_beanie.svg"
+  },
+  {
+   "name": "afro",
+   "sheet": "crowd_afro.png",
+   "source": "crowd_afro.svg"
+  },
+  {
+   "name": "bucket",
+   "sheet": "crowd_bucket.png",
+   "source": "crowd_bucket.svg"
+  },
+  {
+   "name": "spiky",
+   "sheet": "crowd_spiky.png",
+   "source": "crowd_spiky.svg"
+  }
+ ]
+}

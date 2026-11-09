@@ -1,0 +1,40 @@
+# Cloud voice IDs for each MC (VOICE=openrouter). One fixed ID per provider, or the voice changes every line.
+# The section name is the character sheet's file name (freestyle/characters/<id>.toml). Restart the server
+# after editing; ad-libs re-render for changed voices.
+#
+#   elevenlabs: used with TTS_MODEL=elevenlabs/eleven-v3 (the default)
+#   fish:       used with TTS_MODEL=fish-audio/drama-3 (cheaper, faster). Copy an ID from a voice's page at
+#               https://fish.audio/discovery (the 32-character ID in the voice's URL).
+#               An MC with no fish ID falls back to one shared default voice.
+#
+# Avoid voices that impersonate real people or copyrighted characters.
+
+[big_poopy_pants]
+elevenlabs = "jBpfuIE2acCO8z3wKNLl"   # Gigi, childlike
+fish = "6f806954174d4df18b2225e25fe0c97d"
+
+[lil_nervous]
+elevenlabs = "IKne3meq5aSn9XLyUdCD"   # Charlie
+fish = "711cf3ed00ab441a8f54a45058047b7a"
+
+[mc_static]
+elevenlabs = "ErXwobaYiN019PkySvjV"   # Antoni
+fish = "20f8c3e883ed4c32a20368c4df9d1d3e"
+
+[loose_cannon]
+elevenlabs = "yoZ06aMxZJJ28mfd3POQ"   # Sam, raspy
+fish = "7db42665c1b74dc5991f3d5f7428014b"
+
+[kid_venom]
+elevenlabs = "N2lVS1w4EtoT3dr4eOWO"   # Callum, intense
+fish = "833982762961403c93c19967195306e5"
+
+[the_champ]
+elevenlabs = "2EiwWnXFnvU5JabPnv8n"   # Clyde, deep
+fish = "fd5c62c8ef274fcea7d870a0fb7446d3"
+
+[interviewer]   # the pre-show interviewer (tools/render_interviewer.py)
+fish = "b347db033a6549378b48d00acb0d06cd"
+
+[dj]   # the DJ who hosts the battles (tools/render_dj.py, and GET /dj/name for the player's name)
+fish = "906b8b47c30d4ba2a7f1287773e8a3ed"

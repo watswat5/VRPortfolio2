@@ -1,0 +1,14 @@
+# Core server + local Whisper speech-to-text. GPU extras: requirements-gpu.txt (setup.sh picks).
+fastapi>=0.110
+uvicorn[standard]>=0.29
+numpy>=1.26
+httpx>=0.27
+pronouncing>=0.2
+wordfreq>=3.0
+librosa>=0.10       # beat analysis of backend/songs
+audiotsm>=0.1       # fits voice lines to the bar (all voices, including hosted ones)
+faster-whisper>=1.0
+websockets>=12
+pytest>=8
+# optional, for tools/test_client.py --mic
+# sounddevice>=0.4

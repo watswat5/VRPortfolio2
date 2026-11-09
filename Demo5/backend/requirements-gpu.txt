@@ -1,0 +1,7 @@
+# NVIDIA GPU extras.
+# CUDA 12 cuBLAS/cuDNN for faster-whisper (CTranslate2) on the GPU; setup.sh puts them on LD_LIBRARY_PATH.
+nvidia-cublas-cu12
+nvidia-cudnn-cu12>=9,<10
+# Opponent voice: Qwen3-TTS through faster-qwen3-tts (CUDA graphs; pulls in PyTorch, ~3 GB).
+# Skip with ./setup.sh --no-voice.
+faster-qwen3-tts>=0.5

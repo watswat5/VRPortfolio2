@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Song Markup · Freestyle Simulator</title>
+<style>
+  :root {
+    --bg: #0e0f13; --panel: #171920; --line: #262a35; --text: #e8e9ee; --dim: #8a8fa0;
+    --you: #4fd1c5; --opp: #f6809a; --hot: #ffb547; --good: #7bd88f;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.4 system-ui, sans-serif; }
+  header { display: flex; align-items: center; gap: 14px; padding: 12px 20px; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+  h1 { font-size: 18px; margin: 0 12px 0 0; letter-spacing: .5px; }
+  a { color: var(--you); }
+  label { color: var(--dim); font-size: 13px; display: flex; align-items: center; gap: 6px; }
+  select { background: var(--panel); color: var(--text); border: 1px solid var(--line); border-radius: 6px; padding: 4px 6px; max-width: 280px; }
+  button { background: var(--you); color: #04201d; border: 0; border-radius: 8px; padding: 7px 14px; font-weight: 600; cursor: pointer; }
+  button.secondary { background: var(--line); color: var(--text); }
+  button.small { padding: 4px 9px; font-size: 13px; }
+  button:disabled { opacity: .35; cursor: default; }
+  #status { color: var(--dim); font-size: 13px; margin-left: auto; }
+  main { display: grid; grid-template-columns: 1fr 300px; gap: 16px; padding: 16px 20px; }
+  @media (max-width: 1000px) { main { grid-template-columns: 1fr; } }
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+  .panel h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: var(--dim); margin: 0 0 12px; }
+  #tools { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-bottom: 14px; }
+  #grid { display: grid; grid-template-columns: repeat(16, 1fr); gap: 3px; user-select: none; }
+  .bar { position: relative; height: 54px; border-radius: 5px; background: #1c1f28; cursor: pointer; overflow: hidden;
+         border: 2px solid transparent; }
+  .bar .lvl { position: absolute; left: 0; right: 0; bottom: 0; background: rgba(255,255,255,.18); }
+  .bar .n { position: absolute; top: 2px; left: 4px; font-size: 10px; color: var(--dim); }
+  .bar .tag { position: absolute; top: 14px; left: 4px; font-size: 13px; font-weight: 700; color: #0b0c10; }
+  .bar.brk { background: repeating-linear-gradient(135deg, #2a2d38 0 6px, #22252e 6px 12px); }
+  .bar.sel { border-color: var(--text); }
+  .bar.play { box-shadow: inset 0 0 0 2px var(--hot); }
+  .bar.start { border-left: 3px solid #fff; }
+  #segs { font-size: 14px; }
+  #segs div { display: flex; justify-content: space-between; padding: 3px 0; border-bottom: 1px solid var(--line); }
+  #segs .warn { color: var(--hot); }
+  .help { color: var(--dim); font-size: 13px; line-height: 1.6; }
+  kbd { background: var(--line); border-radius: 4px; padding: 0 5px; font-size: 12px; color: var(--text); }
+  .legend { display: inline-block; width: 12px; height: 12px; border-radius: 3px; vertical-align: -1px; margin-right: 4px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>SONG MARKUP</h1>
+  <label>Song <select id="song"></select></label>
+  <span id="info" style="color:var(--dim);font-size:13px"></span>
+  <label>Grid <button class="secondary small" id="nudgeL" title="Move the bar lines a beat earlier">◀ beat</button>
+         <button class="secondary small" id="nudgeR" title="Move the bar lines a beat later">beat ▶</button></label>
+  <label><input type="checkbox" id="click"> Click track</label>
+  <a href="./">Battle</a>
+  <span id="status">Loading…</span>
+</header>
+<main>
+  <section class="panel">
+    <div id="tools">
+      <button id="play">▶ Play</button>
+      <button class="secondary" id="mkPhrase">Phrase <kbd>P</kbd></button>
+      <button class="secondary" id="mkBreak">Break <kbd>B</kbd></button>
+      <button class="secondary" id="mkClear">Clear <kbd>C</kbd></button>
+      <span style="flex:1"></span>
+      <button class="secondary" id="reset" title="Throw away the marks and use the automatic analysis">Use analysis</button>
+      <button id="save">Save</button>
+    </div>
+    <div id="grid"></div>
+  </section>
+  <aside class="panel">
+    <h2>Phrases and breaks</h2>
+    <div id="segs"></div>
+    <h2 style="margin-top:18px">How to</h2>
+    <div class="help">
+      Each square is a bar on the song's BPM grid; the white fill is its bass, so the breaks stand out.
+      Click a bar, <kbd>Shift</kbd>-click (or drag) to select a run, then mark it a
+      <span class="legend" style="background:var(--you)"></span><b>phrase</b> (<kbd>P</kbd>: a whole turn) or a
+      <span class="legend" style="background:#2a2d38"></span><b>break</b> (<kbd>B</kbd>: nobody starts a turn there).
+      Marking part of a phrase again splits it. <kbd>Space</kbd> plays from the selection; <kbd>←</kbd> <kbd>→</kbd> move it.<br>
+      Bars before the first phrase are the intro (the count-in); the song loops from the first phrase to the end of the
+      last marked bar. If the bass hits sit off the bar lines, move the grid a beat with ◀ ▶ and check with the click track.
+    </div>
+  </aside>
+</main>
+<script>
+"use strict";
+const $ = (id) => document.getElementById(id);
+const status = (t) => ($("status").textContent = t);
+const HUES = [172, 340, 40, 265, 95, 205, 15, 305];   // phrase colours, in turn
+
+let songs = [], song = null, buffer = null, ctx = null;
+let bar = 2, beat = 0.5, bpb = 4, first = 0, nBars = 0;
+let kind = [];        // per bar: -1 unmarked, -2 break, >= 0 a phrase id
+let nextId = 0;
+let bass = [];        // per bar, 0..1
+let sel = [0, 0], dragging = false;
+let src = null, playFrom = 0, playAt = 0, clickTimer = null, clickNext = 0;
+let dirty = false;
+
+async function getJSON(url, opts) {
+  const r = await fetch(url, opts);
+  if (!r.ok) throw new Error((await r.text()) || r.statusText);
+  return r.json();
+}
+
+// ---------- loading ----------
+async function init() {
+  songs = await getJSON("songs");
+  $("song").innerHTML = songs.map((s) => `<option value="${s.id}">${s.title}${s.marked ? " · marked" : ""}</option>`).join("");
+  $("song").onchange = () => load($("song").value);
+  if (songs.length) await load(songs[0].id);
+  else status("No songs in backend/songs.");
+}
+
+async function load(id) {
+  if (dirty && !confirm("Leave without saving the marks?")) { $("song").value = song.id; return; }
+  stop();
+  song = songs.find((s) => s.id === id);
+  bpb = song.beats_per_bar || 4;
+  beat = 60 / song.bpm; bar = bpb * beat; first = song.first_downbeat_s;
+  status(`Loading ${song.title}…`);
+  ctx = ctx || new AudioContext();
+  buffer = await ctx.decodeAudioData(await (await fetch(song.url)).arrayBuffer());
+  fromSong();
+  await measure();
+  render();
+  $("info").textContent = `${(+song.bpm).toFixed(1)} BPM · ${nBars} bars of ${bar.toFixed(2)} s`;
+  status(song.marked ? "Marked by hand." : "Phrases from the automatic analysis.");
+}
+
+/** The marks from the song's phrases and breaks (marked or analysed). */
+function fromSong() {
+  nBars = Math.floor((buffer.duration - first) / bar);
+  kind = new Array(nBars).fill(-1);
+  nextId = 0;
+  const idx = (t) => Math.round((t - first) / bar);
+  for (const [a, b] of song.breaks || []) for (let k = idx(a); k < idx(b); k++) if (k >= 0 && k < nBars) kind[k] = -2;
+  for (const p of song.phrases || []) { const id = nextId++; for (let k = idx(p.start); k < idx(p.end); k++) if (k >= 0 && k < nBars) kind[k] = id; }
+  dirty = false;
+}
+
+/** Bass level per bar (low-passed at 150 Hz, rendered offline), normalised to the song's typical bar. */
+async function measure() {
+  const sr = 8000, off = new OfflineAudioContext(1, Math.ceil(buffer.duration * sr), sr);
+  const s = off.createBufferSource(); s.buffer = buffer;
+  const lp = off.createBiquadFilter(); lp.type = "lowpass"; lp.frequency.value = 150;
+  s.connect(lp).connect(off.destination); s.start();
+  const x = (await off.startRendering()).getChannelData(0);
+  bass = [];
+  for (let k = 0; k < nBars; k++) {
+    const a = Math.floor((first + k * bar + 0.05) * sr), b = Math.floor((first + (k + 1) * bar - 0.05) * sr);
+    let e = 0; for (let i = a; i < b; i++) e += x[i] * x[i];
+    bass.push(Math.sqrt(e / Math.max(1, b - a)));
+  }
+  const med = [...bass].sort((p, q) => p - q)[Math.floor(bass.length / 2)] || 1;
+  bass = bass.map((v) => Math.min(1, v / med / 1.6));
+}
+
+// ---------- drawing ----------
+function render() {
+  const lo = Math.min(...sel), hi = Math.max(...sel);
+  const order = [];   // phrase ids in the order they appear, for colours
+  kind.forEach((k) => k >= 0 && !order.includes(k) && order.push(k));
+  $("grid").innerHTML = kind.map((k, i) => {
+    const startsPhrase = k >= 0 && kind[i - 1] !== k;
+    let len = 0; if (startsPhrase) while (kind[i + len] === k) len++;
+    const bg = k >= 0 ? `background:hsl(${HUES[order.indexOf(k) % HUES.length]} 55% 55%)` : "";
+    return `<div class="bar${k === -2 ? " brk" : ""}${i >= lo && i <= hi ? " sel" : ""}${startsPhrase ? " start" : ""}" data-i="${i}" style="${bg}">
+      <div class="lvl" style="height:${Math.round(bass[i] * 100)}%"></div><span class="n">${i + 1}</span>
+      ${startsPhrase ? `<span class="tag">${len}</span>` : ""}</div>`;
+  }).join("");
+  renderSegs();
+}
+
+function segments() {
+  const out = [];
+  for (let i = 0; i < nBars;) {
+    let j = i; while (j < nBars && kind[j] === kind[i]) j++;
+    if (kind[i] !== -1) out.push({ kind: kind[i] === -2 ? "break" : "phrase", a: i, b: j });
+    i = j;
+  }
+  return out;
+}
+
+function renderSegs() {
+  const segs = segments();
+  const firstPhrase = segs.find((s) => s.kind === "phrase");
+  $("segs").innerHTML = (firstPhrase ? `<div><span>intro (count-in)</span><span>bars 1–${firstPhrase.a}</span></div>` : "") +
+    segs.map((s) => `<div class="${s.kind === "phrase" && s.b - s.a < 4 ? "warn" : ""}"><span>${s.kind}${s.kind === "phrase" && s.b - s.a < 4 ? " (short for a turn)" : ""}</span>
+      <span>bars ${s.a + 1}–${s.b} · ${s.b - s.a}</span></div>`).join("") +
+    (segs.length ? `<div style="color:var(--dim)"><span>loop</span><span>bars ${firstPhrase ? firstPhrase.a + 1 : "-"}–${segs[segs.length - 1].b}</span></div>` : "") ||
+    `<div style="color:var(--dim)">Nothing marked.</div>`;
+  $("save").disabled = !firstPhrase;
+}
+
+// ---------- marking ----------
+function mark(what) {
+  const lo = Math.min(...sel), hi = Math.max(...sel);
+  const id = what === "phrase" ? nextId++ : what === "break" ? -2 : -1;
+  for (let k = lo; k <= hi; k++) kind[k] = id;
+  dirty = true;
+  render();
+}
+
+$("grid").addEventListener("mousedown", (e) => {
+  const el = e.target.closest(".bar"); if (!el) return;
+  const i = +el.dataset.i;
+  sel = e.shiftKey ? [sel[0], i] : [i, i];
+  dragging = true; render();
+});
+$("grid").addEventListener("mouseover", (e) => {
+  const el = e.target.closest(".bar"); if (!dragging || !el) return;
+  sel = [sel[0], +el.dataset.i]; render();
+});
+window.addEventListener("mouseup", () => (dragging = false));
+$("mkPhrase").onclick = () => mark("phrase");
+$("mkBreak").onclick = () => mark("break");
+$("mkClear").onclick = () => mark("clear");
+window.addEventListener("keydown", (e) => {
+  if (e.target.tagName === "SELECT") return;
+  const k = e.key.toLowerCase();
+  if (k === "p") mark("phrase");
+  else if (k === "b") mark("break");
+  else if (k === "c") mark("clear");
+  else if (k === " ") { e.preventDefault(); src ? stop() : play(); }
+  else if (k === "arrowleft" || k === "arrowright") {
+    const d = k === "arrowleft" ? -1 : 1, i = Math.max(0, Math.min(nBars - 1, Math.min(...sel) + d));
+    sel = [i, i]; render(); if (src) play();
+  }
+});
+
+// The bar grid a beat earlier or later: the bars move, the marks stay on their bar numbers.
+function nudge(d) {
+  first += d * beat;
+  if (first < 0) first += bar;
+  if (first >= bar) first -= bar;
+  nBars = Math.floor((buffer.duration - first) / bar);
+  kind = kind.slice(0, nBars).concat(new Array(Math.max(0, nBars - kind.length)).fill(-1));
+  dirty = true;
+  measure().then(render);
+  status(`Grid moved ${d > 0 ? "later" : "earlier"} a beat: first downbeat at ${first.toFixed(3)} s.`);
+}
+$("nudgeL").onclick = () => nudge(-1);
+$("nudgeR").onclick = () => nudge(1);
+
+// ---------- playback ----------
+async function play() {
+  stop();
+  await ctx.resume();
+  playFrom = first + Math.min(...sel) * bar;
+  src = ctx.createBufferSource(); src.buffer = buffer; src.connect(ctx.destination);
+  playAt = ctx.currentTime + 0.05;
+  src.start(playAt, playFrom);
+  clickNext = 0;
+  clickTimer = setInterval(scheduleClicks, 25);
+  $("play").textContent = "■ Stop";
+  requestAnimationFrame(frame);
+}
+
+function stop() {
+  if (src) { try { src.stop(); } catch {} src = null; }
+  clearInterval(clickTimer);
+  $("play").textContent = "▶ Play";
+  document.querySelectorAll(".bar.play").forEach((el) => el.classList.remove("play"));
+}
+$("play").onclick = () => (src ? stop() : play());
+
+function scheduleClicks() {   // a click on every beat, accent on the downbeat, to check the grid by ear
+  if (!src || !$("click").checked) return;
+  while (playAt + clickNext * beat < ctx.currentTime + 0.12) {
+    const t = playAt + clickNext * beat, o = ctx.createOscillator(), g = ctx.createGain();
+    o.frequency.value = clickNext % bpb === 0 ? 1500 : 950;
+    g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(0.5, t + 0.002); g.gain.exponentialRampToValueAtTime(0.0001, t + 0.05);
+    o.connect(g).connect(ctx.destination); o.start(t); o.stop(t + 0.06);
+    clickNext++;
+  }
+}
+
+function frame() {
+  if (!src) return;
+  const pos = playFrom + (ctx.currentTime - playAt), i = Math.floor((pos - first) / bar);
+  document.querySelectorAll(".bar.play").forEach((el) => +el.dataset.i !== i && el.classList.remove("play"));
+  const el = document.querySelector(`.bar[data-i="${i}"]`);
+  if (el) el.classList.add("play");
+  requestAnimationFrame(frame);
+}
+
+// ---------- saving ----------
+$("save").onclick = async () => {
+  const segs = segments().map((s) => ({ kind: s.kind, start: +(first + s.a * bar).toFixed(4), end: +(first + s.b * bar).toFixed(4) }));
+  try {
+    const saved = await getJSON(`songs/${song.id}/markup`, {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ first_downbeat_s: +first.toFixed(4), segments: segs }),
+    });
+    Object.assign(song, saved); dirty = false;
+    $("song").selectedOptions[0].textContent = `${song.title} · marked`;
+    status(`Saved: ${saved.phrases.length} phrases, ${saved.breaks.length} breaks. Battles use them now.`);
+  } catch (e) { status("Couldn't save: " + e.message); }
+};
+
+$("reset").onclick = async () => {
+  if (!confirm("Throw away the marks for this song and use the automatic analysis?")) return;
+  try {
+    const s = await getJSON(`songs/${song.id}/markup`, { method: "DELETE" });
+    Object.assign(song, s); delete song.marked;
+    $("song").selectedOptions[0].textContent = song.title;
+    first = song.first_downbeat_s; fromSong(); await measure(); render();
+    status("Back to the automatic analysis.");
+  } catch (e) { status("Couldn't reset: " + e.message); }
+};
+
+window.addEventListener("beforeunload", (e) => { if (dirty) e.preventDefault(); });
+init().catch((e) => status("Couldn't load: " + e.message));
+</script>
+</body>
+</html>

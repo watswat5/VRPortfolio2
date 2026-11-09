@@ -1,0 +1,12 @@
+# The server's image only needs backend/ (see Dockerfile). Never the keys.
+*
+!backend/
+backend/.env
+backend/.env.*
+!backend/.env.example
+backend/certs/
+backend/tests/
+backend/tools/
+backend/out/
+**/__pycache__
+**/*.py[cod]

@@ -1,0 +1,46 @@
+{
+ "jake_plah-rap-freestyle-beat-435114.mp3": {
+  "segments": [
+   {
+    "end": 51.2298,
+    "kind": "phrase",
+    "start": 12.8287
+   },
+   {
+    "end": 64.0301,
+    "kind": "break",
+    "start": 51.2298
+   },
+   {
+    "end": 89.6308,
+    "kind": "phrase",
+    "start": 64.0301
+   },
+   {
+    "end": 102.4311,
+    "kind": "break",
+    "start": 89.6308
+   },
+   {
+    "end": 128.0318,
+    "kind": "phrase",
+    "start": 102.4311
+   },
+   {
+    "end": 147.2323,
+    "kind": "break",
+    "start": 128.0318
+   },
+   {
+    "end": 172.833,
+    "kind": "phrase",
+    "start": 147.2323
+   },
+   {
+    "end": 195.2336,
+    "kind": "phrase",
+    "start": 172.833
+   }
+  ]
+ }
+}

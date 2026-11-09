@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Freestyle Simulator</title>
+<style>
+  :root {
+    --bg: #0e0f13; --panel: #171920; --line: #262a35; --text: #e8e9ee; --dim: #8a8fa0;
+    --you: #4fd1c5; --opp: #f6809a; --hot: #ffb547; --good: #7bd88f;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.4 system-ui, sans-serif; }
+  header { display: flex; align-items: center; gap: 16px; padding: 12px 20px; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+  h1 { font-size: 18px; margin: 0 12px 0 0; letter-spacing: .5px; }
+  label { color: var(--dim); font-size: 13px; display: flex; align-items: center; gap: 6px; }
+  input[type=number], select { background: var(--panel); color: var(--text); border: 1px solid var(--line); border-radius: 6px; padding: 4px 6px; width: 64px; }
+  select { width: auto; max-width: 220px; }
+  button { background: var(--you); color: #04201d; border: 0; border-radius: 8px; padding: 8px 16px; font-weight: 600; cursor: pointer; }
+  button.secondary { background: var(--line); color: var(--text); }
+  button:disabled { opacity: .35; cursor: default; }
+  #status { color: var(--dim); font-size: 13px; margin-left: auto; }
+
+  main { display: grid; grid-template-columns: 280px 1fr 280px; gap: 16px; padding: 16px 20px; }
+  @media (max-width: 1000px) { main { grid-template-columns: 1fr; } }
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+  .panel h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: var(--dim); margin: 0 0 12px; }
+
+  /* turn banner */
+  #banner { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
+  #turnLabel { font-size: 26px; font-weight: 700; }
+  #turnLabel.user { color: var(--you); } #turnLabel.opponent { color: var(--opp); }
+  #turnSub { color: var(--dim); }
+  #beats { display: flex; gap: 8px; margin-left: auto; }
+  .dot { width: 18px; height: 18px; border-radius: 50%; background: var(--line); transition: background .05s; }
+  .dot.on { background: var(--text); } .dot.on.one { background: var(--hot); }
+  #progress { height: 6px; background: var(--line); border-radius: 3px; overflow: hidden; margin-bottom: 16px; }
+  #progress > div { height: 100%; width: 0; background: var(--you); }
+
+  /* transcript / verse */
+  #stage { min-height: 260px; font-size: 20px; line-height: 1.6; }
+  #stage .partial { color: var(--dim); }
+  #stage .line { padding: 2px 0; color: var(--dim); transition: color .2s; }
+  #stage .line.now { color: var(--opp); font-weight: 600; }
+  #stage .line.done { color: var(--text); }
+  #interp { color: var(--dim); font-size: 13px; font-style: italic; margin-top: 8px; }
+  #controls { display: flex; gap: 10px; margin-top: 16px; }
+  #assistBox { margin-top: 12px; display: none; }
+  #assistBox.on { display: block; }
+  #drops { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-bottom: 8px; font-size: 13px; color: var(--dim); }
+  .drop { padding: 3px 10px; border-radius: 999px; border: 1px solid var(--hot); color: var(--hot); font-weight: 600; font-size: 14px; }
+  .drop.used { background: var(--hot); color: #2a1a00; }
+  #rhymes { font-size: 15px; color: var(--dim); min-height: 22px; }
+  #rhymes b { color: var(--you); }
+  #rhymes .r { color: var(--text); margin-right: 10px; }
+
+  /* crowd */
+  #crowdMeter { display: flex; flex-direction: column-reverse; gap: 3px; height: 260px; position: relative; }
+  .seg { flex: 1; border-radius: 3px; background: var(--line); transition: background .15s; }
+  #crowdMood { font-size: 22px; font-weight: 700; margin-top: 10px; }
+  #crowdNums { color: var(--dim); font-size: 13px; }
+  .big { font-size: 34px; font-weight: 800; }
+  #score { display: flex; justify-content: space-between; margin-top: 16px; }
+  #score .you { color: var(--you); } #score .opp { color: var(--opp); }
+
+  /* opponent */
+  #oppFace { font-size: 56px; text-align: center; line-height: 1; }
+  #oppMood { text-align: center; font-size: 20px; font-weight: 700; margin: 6px 0 2px; }
+  #oppGesture { text-align: center; color: var(--dim); font-size: 13px; margin-bottom: 14px; }
+  .dim-row { display: grid; grid-template-columns: 90px 1fr 32px; gap: 8px; align-items: center; margin: 6px 0; font-size: 13px; }
+  .bar { height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; }
+  .bar > div { height: 100%; background: var(--opp); width: 0; transition: width .4s; }
+
+  /* character sheet */
+  #sheet { margin-top: 16px; border-top: 1px solid var(--line); padding-top: 12px; font-size: 13px; }
+  #sheet .bg { color: var(--dim); margin-bottom: 8px; }
+  #sheet .chips { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 8px; }
+  #sheet .chip { background: var(--line); border-radius: 999px; padding: 1px 8px; font-size: 12px; }
+  #sheet .stat { display: grid; grid-template-columns: 90px 1fr 24px; gap: 8px; align-items: center; margin: 3px 0; }
+  #sheet .stat .bar > div { background: var(--hot); }
+  #sheet .sore { margin-top: 8px; }
+  #sheet .sore span { display: inline-block; margin: 2px 4px 0 0; padding: 1px 8px; border-radius: 6px; border: 1px dashed var(--opp); color: var(--opp); }
+  #sheet .sore span.found { border-style: solid; background: #3a1a22; }
+
+  /* bottom: feed + flow */
+  #bottom { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding: 0 20px 20px; }
+  @media (max-width: 1000px) { #bottom { grid-template-columns: 1fr; } }
+  #feed { max-height: 220px; overflow-y: auto; font-size: 13px; }
+  .rx { padding: 6px 0; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: 1fr auto; gap: 8px; }
+  .rx .who-user { color: var(--you); } .rx .who-opponent { color: var(--opp); }
+  .rx .meta { color: var(--dim); text-align: right; white-space: nowrap; }
+  .tag { display: inline-block; font-size: 11px; padding: 0 6px; border-radius: 4px; margin-left: 4px; }
+  .tag.punch { background: var(--hot); color: #2a1a00; } .tag.fell { background: #5a2330; }
+  #flow { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .stat .v { font-size: 22px; font-weight: 700; } .stat .k { color: var(--dim); font-size: 12px; }
+  #micLevel { width: 80px; height: 6px; background: var(--line); border-radius: 3px; overflow: hidden; }
+  #micLevel > div { height: 100%; width: 0; background: var(--good); }
+
+  #result { position: fixed; inset: 0; background: rgba(0,0,0,.75); display: none; align-items: center; justify-content: center; }
+  #result .card { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 32px 48px; text-align: center; }
+  #result h2 { font-size: 36px; margin: 0 0 8px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>FREESTYLE SIMULATOR</h1>
+  <a href="markup.html" style="color:var(--dim);font-size:13px">Mark up songs</a>
+  <label>Beat <select id="song"><option value="">Metronome</option></select></label>
+  <label>BPM <input id="bpm" type="number" min="60" max="180" step="any" value="90"></label>
+  <label title="With a song, each turn is one of its phrases">Bars/turn <input id="bars" type="number" min="2" max="32" value="8"></label>
+  <label>Rounds <input id="rounds" type="number" min="1" max="5" value="2"></label>
+  <label>Opponent <select id="mc"><option value="mc_static">MC Static (Normal)</option></select></label>
+  <label>Beat vol <input id="vol" type="range" min="0" max="1" step="0.05" value="0.6"></label>
+  <label>Opp voice <select id="voice"></select></label>
+  <label><input id="adlibs" type="checkbox" checked> Ad-libs</label>
+  <label title="Rhyme hints, word drops and a kinder crowd"><input id="assist" type="checkbox"> Assist</label>
+  <button id="startBtn">Start battle</button>
+  <button id="stopBtn" class="secondary" disabled>Stop</button>
+  <label>Mic <span id="micLevel"><div></div></span></label>
+  <span id="status">Use headphones: a beat playing into the mic throws off the transcript and flow meter.</span>
+</header>
+
+<main>
+  <section class="panel">
+    <h2>Crowd</h2>
+    <div id="crowdMeter"></div>
+    <div id="crowdMood">-</div>
+    <div id="crowdNums">level - · base -</div>
+    <div id="score">
+      <div><div class="k" style="color:var(--dim);font-size:12px">YOU</div><div class="big you" id="scoreYou">0</div></div>
+      <div style="text-align:right"><div class="k" style="color:var(--dim);font-size:12px">OPPONENT</div><div class="big opp" id="scoreOpp">0</div></div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div id="banner">
+      <div>
+        <div id="turnLabel">Ready</div>
+        <div id="turnSub">Set the BPM, then start. The beat stays the same for the whole battle.</div>
+      </div>
+      <div id="beats"><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+    </div>
+    <div id="progress"><div></div></div>
+    <div id="stage"></div>
+    <div id="assistBox">
+      <div id="drops"></div>
+      <div id="rhymes"></div>
+    </div>
+    <div id="interp"></div>
+    <div id="controls">
+      <button id="endBtn" disabled>End my turn</button>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Opponent · <span id="oppName">MC Static</span></h2>
+    <div id="oppBlurb" style="color:var(--dim);font-size:12px;margin:-6px 0 10px"></div>
+    <div id="oppFace">😎</div>
+    <div id="oppMood">-</div>
+    <div id="oppGesture">&nbsp;</div>
+    <div id="oppDims"></div>
+    <div class="dim-row" style="margin-top:12px"><span>composure</span><div class="bar"><div id="composure" style="background:var(--text)"></div></div><span id="composureV">-</span></div>
+    <div id="sheet"></div>
+  </section>
+</main>
+
+<div id="bottom">
+  <section class="panel">
+    <h2>Reactions</h2>
+    <div id="feed"></div>
+  </section>
+  <section class="panel">
+    <h2>Your flow (last 6 s)</h2>
+    <div id="flow"></div>
+  </section>
+</div>
+
+<div id="result"><div class="card"><h2 id="resultTitle"></h2><div id="resultSub" style="color:var(--dim)"></div><br><button onclick="document.getElementById('result').style.display='none'">Close</button></div></div>
+
+<script src="rules.js?v=2"></script>
+<script src="app.js?v=10"></script>
+</body>
+</html>

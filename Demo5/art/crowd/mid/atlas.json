@@ -1,0 +1,37 @@
+{
+ "cell": [
+  64,
+  96
+ ],
+ "columns": 12,
+ "rows": 8,
+ "moods": [
+  "dead",
+  "silent",
+  "restless",
+  "polite",
+  "warming up",
+  "nodding",
+  "into it",
+  "cheering",
+  "hyped",
+  "going wild",
+  "losing it",
+  "raise the roof"
+ ],
+ "row_order": [
+  "beanie_A",
+  "beanie_B",
+  "afro_A",
+  "afro_B",
+  "bucket_A",
+  "bucket_B",
+  "spiky_A",
+  "spiky_B"
+ ],
+ "pivot": [
+  32.0,
+  84.0
+ ],
+ "use": "column = round(crowd level); row = type*2 + frame; flip frame on the beat with a per-instance offset"
+}

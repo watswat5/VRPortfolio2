@@ -1,0 +1,14 @@
+# Known-good versions of the packages that steer pip's resolver (tested on Python 3.12; resolves for 3.13/3.14).
+# faster-qwen3-tts needs transformers 5.x (5.20 breaks its codec, 5.15.1 works) and huggingface-hub 1.x; without
+# pins pip can dead-end on Python 3.14 (ResolutionImpossible / resolution-too-deep).
+huggingface-hub==1.33.0
+transformers==5.15.1
+tokenizers==0.22.2
+faster-whisper==1.2.1
+ctranslate2==4.8.3
+numpy==2.5.4
+onnxruntime==1.31.0
+torch==2.14.1
+accelerate==1.12.0
+qwen-tts-hf==0.1.1.post1
+faster-qwen3-tts==0.5.4

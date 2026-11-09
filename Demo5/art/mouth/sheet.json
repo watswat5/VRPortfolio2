@@ -1,0 +1,232 @@
+{
+ "sheet": "mouth.png",
+ "source": "mouth.svg",
+ "cell": [
+  256,
+  256
+ ],
+ "columns": 5,
+ "rows": 3,
+ "layout": "frame i is at column i % 5, row i // 5 (row 0 at the top); i = Meta viseme index",
+ "pivot": [
+  128.0,
+  128.0
+ ],
+ "frames": [
+  {
+   "index": 0,
+   "name": "sil",
+   "sounds": "silence, rest",
+   "words": "(between words)",
+   "drawing": "lips together, relaxed, corners slightly up",
+   "rect": [
+    0,
+    0,
+    256,
+    256
+   ]
+  },
+  {
+   "index": 1,
+   "name": "PP",
+   "sounds": "P, B, M",
+   "words": "Pop, Bob, Mom",
+   "drawing": "lips pressed together and pushed out a little",
+   "rect": [
+    256,
+    0,
+    256,
+    256
+   ]
+  },
+  {
+   "index": 2,
+   "name": "FF",
+   "sounds": "F, V",
+   "words": "Fun, Very",
+   "drawing": "upper teeth resting on the lower lip",
+   "rect": [
+    512,
+    0,
+    256,
+    256
+   ]
+  },
+  {
+   "index": 3,
+   "name": "TH",
+   "sounds": "TH",
+   "words": "THink, THis",
+   "drawing": "slightly open, tongue tip between the teeth",
+   "rect": [
+    768,
+    0,
+    256,
+    256
+   ]
+  },
+  {
+   "index": 4,
+   "name": "DD",
+   "sounds": "T, D",
+   "words": "Top, Dog",
+   "drawing": "open, teeth apart, tongue tip up behind the top teeth",
+   "rect": [
+    1024,
+    0,
+    256,
+    256
+   ]
+  },
+  {
+   "index": 5,
+   "name": "kk",
+   "sounds": "K, G",
+   "words": "Kick, Go",
+   "drawing": "open, tongue humped at the back, low",
+   "rect": [
+    0,
+    256,
+    256,
+    256
+   ]
+  },
+  {
+   "index": 6,
+   "name": "CH",
+   "sounds": "CH, J, SH",
+   "words": "CHurch, Jump, SHe",
+   "drawing": "lips pushed forward and squared, teeth together",
+   "rect": [
+    256,
+    256,
+    256,
+    256
+   ]
+  },
+  {
+   "index": 7,
+   "name": "SS",
+   "sounds": "S, Z",
+   "words": "Sun, Zoo",
+   "drawing": "wide, teeth together (a clenched grin)",
+   "rect": [
+    512,
+    256,
+    256,
+    256
+   ]
+  },
+  {
+   "index": 8,
+   "name": "nn",
+   "sounds": "N, L",
+   "words": "No, Love",
+   "drawing": "slightly open, tongue up touching the top teeth",
+   "rect": [
+    768,
+    256,
+    256,
+    256
+   ]
+  },
+  {
+   "index": 9,
+   "name": "RR",
+   "sounds": "R",
+   "words": "Red, caR",
+   "drawing": "rounded, a little open, tongue raised in the middle",
+   "rect": [
+    1024,
+    256,
+    256,
+    256
+   ]
+  },
+  {
+   "index": 10,
+   "name": "aa",
+   "sounds": "AH (open vowels)",
+   "words": "fAther, hOt, cUp",
+   "drawing": "wide open jaw, upper teeth showing, tongue low",
+   "rect": [
+    0,
+    512,
+    256,
+    256
+   ]
+  },
+  {
+   "index": 11,
+   "name": "E",
+   "sounds": "EH, AE",
+   "words": "bEd, cAt",
+   "drawing": "open and wide, both rows of teeth",
+   "rect": [
+    256,
+    512,
+    256,
+    256
+   ]
+  },
+  {
+   "index": 12,
+   "name": "ih",
+   "sounds": "IH, EE",
+   "words": "bIt, sEE",
+   "drawing": "wide, slightly open, teeth close together",
+   "rect": [
+    512,
+    512,
+    256,
+    256
+   ]
+  },
+  {
+   "index": 13,
+   "name": "oh",
+   "sounds": "OH, AW",
+   "words": "gO, sAW",
+   "drawing": "round open O",
+   "rect": [
+    768,
+    512,
+    256,
+    256
+   ]
+  },
+  {
+   "index": 14,
+   "name": "ou",
+   "sounds": "OO, W",
+   "words": "fOOd, Win",
+   "drawing": "small tight pucker",
+   "rect": [
+    1024,
+    512,
+    256,
+    256
+   ]
+  }
+ ],
+ "rhubarb": {
+  "A": 1,
+  "B": 7,
+  "C": 11,
+  "D": 10,
+  "E": 13,
+  "F": 14,
+  "G": 2,
+  "H": 8,
+  "X": 0
+ },
+ "ulipsync": {
+  "A": 10,
+  "I": 12,
+  "U": 14,
+  "E": 11,
+  "O": 13,
+  "N": 8,
+  "-": 0
+ }
+}

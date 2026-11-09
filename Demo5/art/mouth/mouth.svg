@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="768" viewBox="0 0 1280 768">
+<g id="sil" transform="translate(0,0)">
+<path d="M 76.0 123.0 C 96.8 132.0 159.2 132.0 180.0 123.0" fill="none" stroke="#2b1d14" stroke-width="24" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 76.0 123.0 C 96.8 132.0 159.2 132.0 180.0 123.0" fill="none" stroke="#c8605a" stroke-width="16" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 76.0 123.0 C 96.8 132.0 159.2 132.0 180.0 123.0" fill="none" stroke="#2b1d14" stroke-width="4" stroke-linecap="round"/>
+</g>
+<g id="PP" transform="translate(256,0)">
+<path d="M 82.0 128.0 C 100.4 128.0 155.6 128.0 174.0 128.0" fill="none" stroke="#2b1d14" stroke-width="30" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 82.0 128.0 C 100.4 128.0 155.6 128.0 174.0 128.0" fill="none" stroke="#c8605a" stroke-width="22" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 82.0 128.0 C 100.4 128.0 155.6 128.0 174.0 128.0" fill="none" stroke="#a2443f" stroke-width="4" stroke-linecap="round"/>
+</g>
+<g id="FF" transform="translate(512,0)">
+<path d="M 74.0 128.0 C 93.4 106.7 162.6 106.7 182.0 128.0 C 162.6 136.0 93.4 136.0 74.0 128.0 Z" fill="none" stroke="#2b1d14" stroke-width="24" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 74.0 128.0 C 93.4 106.7 162.6 106.7 182.0 128.0 C 162.6 136.0 93.4 136.0 74.0 128.0 Z" fill="none" stroke="#c8605a" stroke-width="16" stroke-linejoin="round" stroke-linecap="round"/>
+<clipPath id="clip2"><path d="M 74.0 128.0 C 93.4 106.7 162.6 106.7 182.0 128.0 C 162.6 136.0 93.4 136.0 74.0 128.0 Z"/></clipPath>
+<path d="M 74.0 128.0 C 93.4 106.7 162.6 106.7 182.0 128.0 C 162.6 136.0 93.4 136.0 74.0 128.0 Z" fill="#4a1418"/>
+<g clip-path="url(#clip2)">
+<rect x="0" y="0" width="256" height="140.0" fill="#fbf7ef"/>
+<line x1="0" y1="140.0" x2="256" y2="140.0" stroke="#d9d2c3" stroke-width="2"/>
+</g>
+<path d="M 74.0 128.0 C 93.4 106.7 162.6 106.7 182.0 128.0 C 162.6 136.0 93.4 136.0 74.0 128.0 Z" fill="none" stroke="#2b1d14" stroke-width="4" stroke-linejoin="round"/>
+<ellipse cx="128.0" cy="136.8" rx="43.2" ry="12.0" fill="#c8605a" stroke="#2b1d14" stroke-width="4"/>
+</g>
+<g id="TH" transform="translate(768,0)">
+<path d="M 74.0 128.0 C 93.4 106.7 162.6 106.7 182.0 128.0 C 162.6 149.3 93.4 149.3 74.0 128.0 Z" fill="none" stroke="#2b1d14" stroke-width="24" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 74.0 128.0 C 93.4 106.7 162.6 106.7 182.0 128.0 C 162.6 149.3 93.4 149.3 74.0 128.0 Z" fill="none" stroke="#c8605a" stroke-width="16" stroke-linejoin="round" stroke-linecap="round"/>
+<clipPath id="clip3"><path d="M 74.0 128.0 C 93.4 106.7 162.6 106.7 182.0 128.0 C 162.6 149.3 93.4 149.3 74.0 128.0 Z"/></clipPath>
+<path d="M 74.0 128.0 C 93.4 106.7 162.6 106.7 182.0 128.0 C 162.6 149.3 93.4 149.3 74.0 128.0 Z" fill="#4a1418"/>
+<g clip-path="url(#clip3)">
+<ellipse cx="128.0" cy="130.0" rx="22" ry="8" fill="#e0707a"/>
+<rect x="0" y="0" width="256" height="126.0" fill="#fbf7ef"/>
+<line x1="0" y1="126.0" x2="256" y2="126.0" stroke="#d9d2c3" stroke-width="2"/>
+<rect x="0" y="132.0" width="256" height="124.0" fill="#fbf7ef"/>
+<line x1="0" y1="132.0" x2="256" y2="132.0" stroke="#d9d2c3" stroke-width="2"/>
+</g>
+<path d="M 74.0 128.0 C 93.4 106.7 162.6 106.7 182.0 128.0 C 162.6 149.3 93.4 149.3 74.0 128.0 Z" fill="none" stroke="#2b1d14" stroke-width="4" stroke-linejoin="round"/>
+<ellipse cx="128.0" cy="136.8" rx="18.4" ry="9" fill="#e0707a" stroke="#2b1d14" stroke-width="4"/>
+</g>
+<g id="DD" transform="translate(1024,0)">
+<path d="M 72.0 128.0 C 92.2 96.0 163.8 96.0 184.0 128.0 C 163.8 157.3 92.2 157.3 72.0 128.0 Z" fill="none" stroke="#2b1d14" stroke-width="24" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 72.0 128.0 C 92.2 96.0 163.8 96.0 184.0 128.0 C 163.8 157.3 92.2 157.3 72.0 128.0 Z" fill="none" stroke="#c8605a" stroke-width="16" stroke-linejoin="round" stroke-linecap="round"/>
+<clipPath id="clip4"><path d="M 72.0 128.0 C 92.2 96.0 163.8 96.0 184.0 128.0 C 163.8 157.3 92.2 157.3 72.0 128.0 Z"/></clipPath>
+<path d="M 72.0 128.0 C 92.2 96.0 163.8 96.0 184.0 128.0 C 163.8 157.3 92.2 157.3 72.0 128.0 Z" fill="#4a1418"/>
+<g clip-path="url(#clip4)">
+<ellipse cx="128.0" cy="127.0" rx="30" ry="10" fill="#e0707a"/>
+<rect x="0" y="0" width="256" height="122.0" fill="#fbf7ef"/>
+<line x1="0" y1="122.0" x2="256" y2="122.0" stroke="#d9d2c3" stroke-width="2"/>
+<rect x="0" y="137.0" width="256" height="119.0" fill="#fbf7ef"/>
+<line x1="0" y1="137.0" x2="256" y2="137.0" stroke="#d9d2c3" stroke-width="2"/>
+</g>
+<path d="M 72.0 128.0 C 92.2 96.0 163.8 96.0 184.0 128.0 C 163.8 157.3 92.2 157.3 72.0 128.0 Z" fill="none" stroke="#2b1d14" stroke-width="4" stroke-linejoin="round"/>
+</g>
+<g id="kk" transform="translate(0,256)">
+<path d="M 72.0 128.0 C 92.2 96.0 163.8 96.0 184.0 128.0 C 163.8 162.7 92.2 162.7 72.0 128.0 Z" fill="none" stroke="#2b1d14" stroke-width="24" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 72.0 128.0 C 92.2 96.0 163.8 96.0 184.0 128.0 C 163.8 162.7 92.2 162.7 72.0 128.0 Z" fill="none" stroke="#c8605a" stroke-width="16" stroke-linejoin="round" stroke-linecap="round"/>
+<clipPath id="clip5"><path d="M 72.0 128.0 C 92.2 96.0 163.8 96.0 184.0 128.0 C 163.8 162.7 92.2 162.7 72.0 128.0 Z"/></clipPath>
+<path d="M 72.0 128.0 C 92.2 96.0 163.8 96.0 184.0 128.0 C 163.8 162.7 92.2 162.7 72.0 128.0 Z" fill="#4a1418"/>
+<g clip-path="url(#clip5)">
+<ellipse cx="128.0" cy="138.0" rx="38" ry="10" fill="#e0707a"/>
+<rect x="0" y="0" width="256" height="122.0" fill="#fbf7ef"/>
+<line x1="0" y1="122.0" x2="256" y2="122.0" stroke="#d9d2c3" stroke-width="2"/>
+<rect x="0" y="144.0" width="256" height="112.0" fill="#fbf7ef"/>
+<line x1="0" y1="144.0" x2="256" y2="144.0" stroke="#d9d2c3" stroke-width="2"/>
+</g>
+<path d="M 72.0 128.0 C 92.2 96.0 163.8 96.0 184.0 128.0 C 163.8 162.7 92.2 162.7 72.0 128.0 Z" fill="none" stroke="#2b1d14" stroke-width="4" stroke-linejoin="round"/>
+</g>
+<g id="CH" transform="translate(256,256)">
+<path d="M 85.0 128.0 A 43.0 22.0 0 0 1 171.0 128.0 A 43.0 22.0 0 0 1 85.0 128.0 Z" fill="none" stroke="#2b1d14" stroke-width="28" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 85.0 128.0 A 43.0 22.0 0 0 1 171.0 128.0 A 43.0 22.0 0 0 1 85.0 128.0 Z" fill="none" stroke="#c8605a" stroke-width="20" stroke-linejoin="round" stroke-linecap="round"/>
+<clipPath id="clip6"><path d="M 85.0 128.0 A 43.0 22.0 0 0 1 171.0 128.0 A 43.0 22.0 0 0 1 85.0 128.0 Z"/></clipPath>
+<path d="M 85.0 128.0 A 43.0 22.0 0 0 1 171.0 128.0 A 43.0 22.0 0 0 1 85.0 128.0 Z" fill="#4a1418"/>
+<g clip-path="url(#clip6)">
+<rect x="0" y="0" width="256" height="129.0" fill="#fbf7ef"/>
+<line x1="0" y1="129.0" x2="256" y2="129.0" stroke="#d9d2c3" stroke-width="2"/>
+<rect x="0" y="129.0" width="256" height="127.0" fill="#fbf7ef"/>
+<line x1="0" y1="129.0" x2="256" y2="129.0" stroke="#d9d2c3" stroke-width="2"/>
+</g>
+<path d="M 85.0 128.0 A 43.0 22.0 0 0 1 171.0 128.0 A 43.0 22.0 0 0 1 85.0 128.0 Z" fill="none" stroke="#2b1d14" stroke-width="4" stroke-linejoin="round"/>
+</g>
+<g id="SS" transform="translate(512,256)">
+<path d="M 66.0 125.0 C 88.3 109.3 167.7 109.3 190.0 125.0 C 167.7 146.7 88.3 146.7 66.0 125.0 Z" fill="none" stroke="#2b1d14" stroke-width="24" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 66.0 125.0 C 88.3 109.3 167.7 109.3 190.0 125.0 C 167.7 146.7 88.3 146.7 66.0 125.0 Z" fill="none" stroke="#c8605a" stroke-width="16" stroke-linejoin="round" stroke-linecap="round"/>
+<clipPath id="clip7"><path d="M 66.0 125.0 C 88.3 109.3 167.7 109.3 190.0 125.0 C 167.7 146.7 88.3 146.7 66.0 125.0 Z"/></clipPath>
+<path d="M 66.0 125.0 C 88.3 109.3 167.7 109.3 190.0 125.0 C 167.7 146.7 88.3 146.7 66.0 125.0 Z" fill="#4a1418"/>
+<g clip-path="url(#clip7)">
+<rect x="0" y="0" width="256" height="128.0" fill="#fbf7ef"/>
+<line x1="0" y1="128.0" x2="256" y2="128.0" stroke="#d9d2c3" stroke-width="2"/>
+<rect x="0" y="128.0" width="256" height="128.0" fill="#fbf7ef"/>
+<line x1="0" y1="128.0" x2="256" y2="128.0" stroke="#d9d2c3" stroke-width="2"/>
+</g>
+<path d="M 66.0 125.0 C 88.3 109.3 167.7 109.3 190.0 125.0 C 167.7 146.7 88.3 146.7 66.0 125.0 Z" fill="none" stroke="#2b1d14" stroke-width="4" stroke-linejoin="round"/>
+</g>
+<g id="nn" transform="translate(768,256)">
+<path d="M 76.0 128.0 C 94.7 104.0 161.3 104.0 180.0 128.0 C 161.3 152.0 94.7 152.0 76.0 128.0 Z" fill="none" stroke="#2b1d14" stroke-width="24" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 76.0 128.0 C 94.7 104.0 161.3 104.0 180.0 128.0 C 161.3 152.0 94.7 152.0 76.0 128.0 Z" fill="none" stroke="#c8605a" stroke-width="16" stroke-linejoin="round" stroke-linecap="round"/>
+<clipPath id="clip8"><path d="M 76.0 128.0 C 94.7 104.0 161.3 104.0 180.0 128.0 C 161.3 152.0 94.7 152.0 76.0 128.0 Z"/></clipPath>
+<path d="M 76.0 128.0 C 94.7 104.0 161.3 104.0 180.0 128.0 C 161.3 152.0 94.7 152.0 76.0 128.0 Z" fill="#4a1418"/>
+<g clip-path="url(#clip8)">
+<ellipse cx="128.0" cy="127.0" rx="28" ry="8" fill="#e0707a"/>
+<rect x="0" y="0" width="256" height="125.0" fill="#fbf7ef"/>
+<line x1="0" y1="125.0" x2="256" y2="125.0" stroke="#d9d2c3" stroke-width="2"/>
+<rect x="0" y="135.0" width="256" height="121.0" fill="#fbf7ef"/>
+<line x1="0" y1="135.0" x2="256" y2="135.0" stroke="#d9d2c3" stroke-width="2"/>
+</g>
+<path d="M 76.0 128.0 C 94.7 104.0 161.3 104.0 180.0 128.0 C 161.3 152.0 94.7 152.0 76.0 128.0 Z" fill="none" stroke="#2b1d14" stroke-width="4" stroke-linejoin="round"/>
+</g>
+<g id="RR" transform="translate(1024,256)">
+<path d="M 88.0 128.0 A 40.0 22.0 0 0 1 168.0 128.0 A 40.0 24.0 0 0 1 88.0 128.0 Z" fill="none" stroke="#2b1d14" stroke-width="28" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 88.0 128.0 A 40.0 22.0 0 0 1 168.0 128.0 A 40.0 24.0 0 0 1 88.0 128.0 Z" fill="none" stroke="#c8605a" stroke-width="20" stroke-linejoin="round" stroke-linecap="round"/>
+<clipPath id="clip9"><path d="M 88.0 128.0 A 40.0 22.0 0 0 1 168.0 128.0 A 40.0 24.0 0 0 1 88.0 128.0 Z"/></clipPath>
+<path d="M 88.0 128.0 A 40.0 22.0 0 0 1 168.0 128.0 A 40.0 24.0 0 0 1 88.0 128.0 Z" fill="#4a1418"/>
+<g clip-path="url(#clip9)">
+<ellipse cx="128.0" cy="134.0" rx="22" ry="9" fill="#e0707a"/>
+<rect x="0" y="0" width="256" height="122.0" fill="#fbf7ef"/>
+<line x1="0" y1="122.0" x2="256" y2="122.0" stroke="#d9d2c3" stroke-width="2"/>
+</g>
+<path d="M 88.0 128.0 A 40.0 22.0 0 0 1 168.0 128.0 A 40.0 24.0 0 0 1 88.0 128.0 Z" fill="none" stroke="#2b1d14" stroke-width="4" stroke-linejoin="round"/>
+</g>
+<g id="aa" transform="translate(0,512)">
+<path d="M 69.0 128.0 C 90.2 88.0 165.8 88.0 187.0 128.0 C 165.8 194.7 90.2 194.7 69.0 128.0 Z" fill="none" stroke="#2b1d14" stroke-width="24" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 69.0 128.0 C 90.2 88.0 165.8 88.0 187.0 128.0 C 165.8 194.7 90.2 194.7 69.0 128.0 Z" fill="none" stroke="#c8605a" stroke-width="16" stroke-linejoin="round" stroke-linecap="round"/>
+<clipPath id="clip10"><path d="M 69.0 128.0 C 90.2 88.0 165.8 88.0 187.0 128.0 C 165.8 194.7 90.2 194.7 69.0 128.0 Z"/></clipPath>
+<path d="M 69.0 128.0 C 90.2 88.0 165.8 88.0 187.0 128.0 C 165.8 194.7 90.2 194.7 69.0 128.0 Z" fill="#4a1418"/>
+<g clip-path="url(#clip10)">
+<ellipse cx="128.0" cy="162.0" rx="40" ry="14" fill="#e0707a"/>
+<rect x="0" y="0" width="256" height="118.0" fill="#fbf7ef"/>
+<line x1="0" y1="118.0" x2="256" y2="118.0" stroke="#d9d2c3" stroke-width="2"/>
+</g>
+<path d="M 69.0 128.0 C 90.2 88.0 165.8 88.0 187.0 128.0 C 165.8 194.7 90.2 194.7 69.0 128.0 Z" fill="none" stroke="#2b1d14" stroke-width="4" stroke-linejoin="round"/>
+</g>
+<g id="E" transform="translate(256,512)">
+<path d="M 64.0 126.0 C 87.0 96.0 169.0 96.0 192.0 126.0 C 169.0 168.0 87.0 168.0 64.0 126.0 Z" fill="none" stroke="#2b1d14" stroke-width="24" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 64.0 126.0 C 87.0 96.0 169.0 96.0 192.0 126.0 C 169.0 168.0 87.0 168.0 64.0 126.0 Z" fill="none" stroke="#c8605a" stroke-width="16" stroke-linejoin="round" stroke-linecap="round"/>
+<clipPath id="clip11"><path d="M 64.0 126.0 C 87.0 96.0 169.0 96.0 192.0 126.0 C 169.0 168.0 87.0 168.0 64.0 126.0 Z"/></clipPath>
+<path d="M 64.0 126.0 C 87.0 96.0 169.0 96.0 192.0 126.0 C 169.0 168.0 87.0 168.0 64.0 126.0 Z" fill="#4a1418"/>
+<g clip-path="url(#clip11)">
+<ellipse cx="128.0" cy="138.0" rx="40" ry="8" fill="#e0707a"/>
+<rect x="0" y="0" width="256" height="122.0" fill="#fbf7ef"/>
+<line x1="0" y1="122.0" x2="256" y2="122.0" stroke="#d9d2c3" stroke-width="2"/>
+<rect x="0" y="142.0" width="256" height="114.0" fill="#fbf7ef"/>
+<line x1="0" y1="142.0" x2="256" y2="142.0" stroke="#d9d2c3" stroke-width="2"/>
+</g>
+<path d="M 64.0 126.0 C 87.0 96.0 169.0 96.0 192.0 126.0 C 169.0 168.0 87.0 168.0 64.0 126.0 Z" fill="none" stroke="#2b1d14" stroke-width="4" stroke-linejoin="round"/>
+</g>
+<g id="ih" transform="translate(512,512)">
+<path d="M 67.0 125.0 C 89.0 104.0 167.0 104.0 189.0 125.0 C 167.0 152.0 89.0 152.0 67.0 125.0 Z" fill="none" stroke="#2b1d14" stroke-width="24" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 67.0 125.0 C 89.0 104.0 167.0 104.0 189.0 125.0 C 167.0 152.0 89.0 152.0 67.0 125.0 Z" fill="none" stroke="#c8605a" stroke-width="16" stroke-linejoin="round" stroke-linecap="round"/>
+<clipPath id="clip12"><path d="M 67.0 125.0 C 89.0 104.0 167.0 104.0 189.0 125.0 C 167.0 152.0 89.0 152.0 67.0 125.0 Z"/></clipPath>
+<path d="M 67.0 125.0 C 89.0 104.0 167.0 104.0 189.0 125.0 C 167.0 152.0 89.0 152.0 67.0 125.0 Z" fill="#4a1418"/>
+<g clip-path="url(#clip12)">
+<rect x="0" y="0" width="256" height="126.0" fill="#fbf7ef"/>
+<line x1="0" y1="126.0" x2="256" y2="126.0" stroke="#d9d2c3" stroke-width="2"/>
+<rect x="0" y="133.0" width="256" height="123.0" fill="#fbf7ef"/>
+<line x1="0" y1="133.0" x2="256" y2="133.0" stroke="#d9d2c3" stroke-width="2"/>
+</g>
+<path d="M 67.0 125.0 C 89.0 104.0 167.0 104.0 189.0 125.0 C 167.0 152.0 89.0 152.0 67.0 125.0 Z" fill="none" stroke="#2b1d14" stroke-width="4" stroke-linejoin="round"/>
+</g>
+<g id="oh" transform="translate(768,512)">
+<path d="M 89.0 128.0 A 39.0 34.0 0 0 1 167.0 128.0 A 39.0 40.0 0 0 1 89.0 128.0 Z" fill="none" stroke="#2b1d14" stroke-width="28" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 89.0 128.0 A 39.0 34.0 0 0 1 167.0 128.0 A 39.0 40.0 0 0 1 89.0 128.0 Z" fill="none" stroke="#c8605a" stroke-width="20" stroke-linejoin="round" stroke-linecap="round"/>
+<clipPath id="clip13"><path d="M 89.0 128.0 A 39.0 34.0 0 0 1 167.0 128.0 A 39.0 40.0 0 0 1 89.0 128.0 Z"/></clipPath>
+<path d="M 89.0 128.0 A 39.0 34.0 0 0 1 167.0 128.0 A 39.0 40.0 0 0 1 89.0 128.0 Z" fill="#4a1418"/>
+<g clip-path="url(#clip13)">
+<ellipse cx="128.0" cy="154.0" rx="24" ry="10" fill="#e0707a"/>
+<rect x="0" y="0" width="256" height="111.0" fill="#fbf7ef"/>
+<line x1="0" y1="111.0" x2="256" y2="111.0" stroke="#d9d2c3" stroke-width="2"/>
+</g>
+<path d="M 89.0 128.0 A 39.0 34.0 0 0 1 167.0 128.0 A 39.0 40.0 0 0 1 89.0 128.0 Z" fill="none" stroke="#2b1d14" stroke-width="4" stroke-linejoin="round"/>
+</g>
+<g id="ou" transform="translate(1024,512)">
+<path d="M 104.0 128.0 A 24.0 20.0 0 0 1 152.0 128.0 A 24.0 22.0 0 0 1 104.0 128.0 Z" fill="none" stroke="#2b1d14" stroke-width="32" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 104.0 128.0 A 24.0 20.0 0 0 1 152.0 128.0 A 24.0 22.0 0 0 1 104.0 128.0 Z" fill="none" stroke="#c8605a" stroke-width="24" stroke-linejoin="round" stroke-linecap="round"/>
+<clipPath id="clip14"><path d="M 104.0 128.0 A 24.0 20.0 0 0 1 152.0 128.0 A 24.0 22.0 0 0 1 104.0 128.0 Z"/></clipPath>
+<path d="M 104.0 128.0 A 24.0 20.0 0 0 1 152.0 128.0 A 24.0 22.0 0 0 1 104.0 128.0 Z" fill="#4a1418"/>
+<g clip-path="url(#clip14)">
+</g>
+<path d="M 104.0 128.0 A 24.0 20.0 0 0 1 152.0 128.0 A 24.0 22.0 0 0 1 104.0 128.0 Z" fill="none" stroke="#2b1d14" stroke-width="4" stroke-linejoin="round"/>
+</g>
+</svg>
